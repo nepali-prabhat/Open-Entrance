@@ -1,0 +1,17 @@
+.container{
+    position: relative;
+    transition: all ease-in-out 400ms;
+    background-color: #E3E3E3;
+    height:1700px; 
+    width:100vw;
+}
+.moveDown{
+    transform: translateY(7em);
+}
+.courses{
+}
+@media screen and (max-width: 55em){
+    .moveDown{
+        transform: translateY(100vh);
+    }
+}
