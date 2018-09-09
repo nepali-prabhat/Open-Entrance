@@ -16,8 +16,11 @@
     background: #484B4D;
     transition: all ease-out 400ms;
 /*     
-	-webkit-transition-timing-function: cubic-bezier(0.7,0,0.3,1);
-    transition-timing-function: cubic-bezier(0.7,0,0.3,1); */
+
+    -webkit-transition-timing-function: cubic-bezier(0.7,0,0.3,1);
+    transition-timing-function: cubic-bezier(0.7,0,0.3,1); 
+
+*/
     
     display: hidden;
     overflow: hidden;

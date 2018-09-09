@@ -4,7 +4,19 @@ import {Icon, Divider} from 'semantic-ui-react'
 import './style/navStyle.css'
 
 class NavBar extends React.Component{
+constructor(props){
+    super(props)
+}
+    componentWillMount() {
+        window.addEventListener('scroll', this.props.onScroll);
+    }
+    
+    componentWillUnmount() {
+        window.removeEventListener('scroll', this.props.onScroll);
+    }
+
     render(){
+
         let moreMenuClass= (this.props.display.toString() === 'true')? 'menuActive ':' ';
         let moreButtonClass= (this.props.display.toString() === 'true')? 'hamBurgerActive ': '';
         let animateOne = (this.props.display.toString() === 'true')? 'animate1':'';
@@ -13,8 +25,8 @@ class NavBar extends React.Component{
         let animateList=(n)=>(this.props.display.toString() === 'true')? 'active delay'+n.toString():'';
         
         return(
-            <div className={'menu '+ moreMenuClass} >
-                <div className={'hamBurger ' + moreButtonClass} onClick={this.props.onClick}>
+            <div className={'menu '+ moreMenuClass} id='mu'>
+                <div className={'hamBurger ' + moreButtonClass} id='ham' onClick={this.props.onClick}>
                    <div className={animateOne} id='one'></div>
                    <div className={animateTwo} id='two'></div>
                    <div className={animateThree} id='three'></div>

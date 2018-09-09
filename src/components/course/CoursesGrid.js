@@ -3,7 +3,6 @@ import {Grid, Responsive} from 'semantic-ui-react'
 import Course from './Courses'
 
 
-
 function giveCourse(nam, img,top, comp, mark){
     return(
         <Course name={nam} imgName={img} topics={top} completed={comp} marks={mark}/>

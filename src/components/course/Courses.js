@@ -1,5 +1,5 @@
 import React from 'react'
-import {Card, Image, Icon, Progress, Button} from 'semantic-ui-react'
+import {Card, Image, Progress, Button} from 'semantic-ui-react'
 
 
 let Courses = (props)=> {
