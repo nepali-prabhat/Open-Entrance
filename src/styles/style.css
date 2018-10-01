@@ -1,17 +1,31 @@
+@font-face{
+    font-family: Raleway;
+    src:url(../fonts/Raleway/Raleway-Regular.ttf);
+    font-weight: normal;
+}
+@font-face{
+    font-family: Raleway;
+    src:url(../fonts/Raleway/Raleway-Bold.ttf);
+    font-weight: bold;
+}
+@font-face{
+    font-family: Amaranth;
+    src:url(../fonts/Amaranth/Amaranth-Regular.ttf);
+    font-weight: normal;
+}
+*{
+    box-sizing: border-box;
+}
 .container{
     position: relative;
     transition: all ease-in-out 400ms;
-    background-color: #E3E3E3;
-    height:1700px; 
     width:100vw;
 }
 .moveDown{
-    transform: translateY(7em);
-}
-.courses{
+    transform: translateY(6em);
 }
 @media screen and (max-width: 55em){
     .moveDown{
-        transform: translateY(100vh);
+        transform: translateY(412px);
     }
 }

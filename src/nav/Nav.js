@@ -1,22 +1,11 @@
 import React from 'react'
-import {Icon, Divider} from 'semantic-ui-react'
+import {NavLink} from 'react-router-dom'
 
-import './style/navStyle.css'
+ import './style/navStyle.css'
 
-class NavBar extends React.Component{
-constructor(props){
-    super(props)
-}
-    componentWillMount() {
-        window.addEventListener('scroll', this.props.onScroll);
-    }
-    
-    componentWillUnmount() {
-        window.removeEventListener('scroll', this.props.onScroll);
-    }
+class NavBar extends React.Component{   
 
     render(){
-
         let moreMenuClass= (this.props.display.toString() === 'true')? 'menuActive ':' ';
         let moreButtonClass= (this.props.display.toString() === 'true')? 'hamBurgerActive ': '';
         let animateOne = (this.props.display.toString() === 'true')? 'animate1':'';
@@ -25,19 +14,29 @@ constructor(props){
         let animateList=(n)=>(this.props.display.toString() === 'true')? 'active delay'+n.toString():'';
         
         return(
-            <div className={'menu '+ moreMenuClass} id='mu'>
+            <div className={'menua '+ moreMenuClass} id='mu'>
                 <div className={'hamBurger ' + moreButtonClass} id='ham' onClick={this.props.onClick}>
-                   <div className={animateOne} id='one'></div>
-                   <div className={animateTwo} id='two'></div>
-                   <div className={animateThree} id='three'></div>
+                    <div className={animateOne} id='one'></div>
+                    <div className={animateTwo} id='two'></div>
+                    <div className={animateThree} id='three'></div>
                 </div>
                 <nav>
                     <ul>
-                        <li className={animateList(1) + ' linkActive '} key='guide'> <a href="#"><div>Starter <span>Guide</span></div></a></li>
-                        <li className={animateList(2)} key='courses'> <a href="#"><div>Entrance <span>Courses</span></div></a></li>
-                        <li className={animateList(3)} key='mockTest'> <a href="#"><div>Mock <span>Test</span></div></a></li>
-                        <li className={animateList(4)} key='discussion'> <a href="#"><div>Community <span>Discussion</span></div></a></li>
-                        <li className={animateList(5)} key='contact'> <a href="#"><div>Contact <span>Information</span></div></a></li>
+                        <li className={animateList(1)} key='guide'>
+                            <NavLink to='/' exact activeClassName='linkActive' onClick={this.props.onClick}><div>Starter <span>Guide</span></div></NavLink>
+                        </li>
+                        <li className={animateList(2)} key='courses'>
+                            <NavLink to='/courses' activeClassName='linkActive' onClick={this.props.onClick}><div>Entrance <span>Courses</span></div></NavLink>
+                        </li>
+                        <li className={animateList(3)} key='mockTest'>
+                            <NavLink to='/mock-test' activeClassName='linkActive' onClick={this.props.onClick}><div>Mock <span>Test</span></div></NavLink>
+                        </li>
+                        <li className={animateList(4)} key='discussion'>
+                            <NavLink to='/community-discussion' activeClassName='linkActive' onClick={this.props.onClick}><div>Community <span>Discussion</span></div></NavLink>
+                        </li>
+                        <li className={animateList(5)} key='contact'>
+                            <NavLink to='/contact-us' activeClassName='linkActive' onClick={this.props.onClick}><div>Contact <span>Information</span></div></NavLink>
+                        </li>
                     </ul> 
                 </nav>
             </div>

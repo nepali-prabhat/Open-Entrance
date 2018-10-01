@@ -1,8 +1,10 @@
 import React from 'react'
+import {Link,Route} from 'react-router-dom'
 import {Card, Image, Progress, Button} from 'semantic-ui-react'
 
 
 let Courses = (props)=> {
+    var match = props.match;
     return(
     <Card>
         <Image size='medium' src={require('..//../images/'+ props.imgName)} />
@@ -20,9 +22,11 @@ let Courses = (props)=> {
             </Card.Description>
         </Card.Content>
         <Card.Content extra>
-            <Button fluid color="green">
-               {(props.completed===0)? 'Start': 'Continue'}
-            </Button>
+            <Link to={`${match.url}/${props.name}`}>
+                <Button fluid color="green">
+                    {(props.completed===0)? 'Start': 'Continue'}
+                </Button>
+            </Link> 
         </Card.Content>
     </Card>
     )

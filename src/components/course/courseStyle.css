@@ -1,0 +1,25 @@
+.contain{
+    display:flex;
+    padding:0;
+    margin:0;
+
+}
+.sideBar{
+    width: 30vw;
+    padding: 5em 2em;
+    background: rgb(238,238,238);
+    height: 100vh;
+    overflow:scroll;
+} 
+.contentee{
+    flex: 1;
+    padding: 2em 3em;
+    background: grey;
+}
+.sideBar ul {   
+    list-style: none;
+}
+.sideBar ul li {
+    margin:0.5em 0;
+    font-size: 20px;
+}

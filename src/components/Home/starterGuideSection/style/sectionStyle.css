@@ -1,0 +1,49 @@
+.proSectionLogo{
+    width: 100vw;
+    min-height: 80vh;
+    background-image: url('../../../../images/logoSection.jpg');
+    background-attachment: fixed;
+    background-size: cover;
+    background-position: bottom;
+    background-repeat: no-repeat;
+}
+.proInfo{
+    align-items: center;
+    display:flex;
+    flex-flow: column;
+    padding-top: 25vh;
+}
+.proButtonDiv{
+    margin: 5em 0;
+}
+.proInfo h1{
+    font-family: Amaranth;
+    font-weight:normal;
+    font-size: 50px;
+    color: rgb(255, 255, 255);
+}
+.proSlogan{
+    text-align: center;
+}
+.proSlogan span{
+    font-family: Raleway;
+    font-weight:bold;
+    font-size: 20px;
+    color: rgb(253, 213, 213);
+}
+.proSlogan span span{
+    color: rgb(252, 127, 127);
+}
+@media screen and (max-width:450px){
+    .proInfo h1{
+        font-size: 30px;
+    }
+    .proSlogan span{
+        font-size: 15px;
+    }
+}
+.sectionTwo{
+    padding-top: 9vh; 
+    height: 20vh;
+    background-color: rgb(155, 174, 214);
+}
